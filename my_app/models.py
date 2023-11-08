@@ -1,5 +1,8 @@
 from django.db import models
 
+
+
+
 class Contact(models.Model):
     name = models.CharField(max_length=255,verbose_name='bizimle elaqe')
  
@@ -7,6 +10,7 @@ class Contact(models.Model):
     
     subject = models.CharField(max_length=255,verbose_name='movzu')
     mesage = models.CharField(max_length=255,verbose_name='mesage')
+
 
 
     def __str__(self):
@@ -18,10 +22,12 @@ class Contact(models.Model):
        verbose_name = 'bizim haqqimizda'
        verbose_name_plural = 'bizim haqqimizdakilar'
 
+
 class Products(models.Model):
     card_title = models.CharField(max_length=255,verbose_name='card adi')
     description =models.TextField(verbose_name='bizim haqqimizda')
     image = models.ImageField(upload_to='media/',null=True,blank=True)
+
 
 
     def __str__(self):
